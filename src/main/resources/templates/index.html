@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>吾呢网</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}" href="../static/css/index.css"/>
+</head>
+<body>
+    <header>
+        <nav class="wn-nav-bar" >
+            <div class="logo-container">
+                <a class="logo">
+                    <img alt="logo" th:src="@{/img/test.bmp}" src="../static/img/test.bmp">
+                </a>
+            </div>
+
+            <div class="wn-nav-bar-menu-container">
+                <ul class="wn-nav-bar-menu">
+                    <li class="wn-nav-bar-menuitem">
+                        <a>首页</a>
+                    </li>
+                    <li class="wn-nav-bar-menuitem">
+                        <a>消息</a>
+                    </li>
+                    <li class="wn-nav-bar-menuitem">
+                        <a>注册</a>
+                    </li>
+                    <li class="wn-nav-bar-menuitem">
+                        <a>登录</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="search-container">
+
+                <input type="search" placeholder="...">
+                <button>搜索</button>
+            </div>
+            <div class="user-img-container">
+                <a class="user-img">
+                    <img alt="user-img" src="../static/img/test.bmp">
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="wn-mainpage-container">
+            <div class="wn-mainpage">
+                <div class="wn-mainpage-tags">
+                    <div class="new-tag">最新</div>
+                    <div class="hot-tag">最热</div>
+                    <div class="publish-tag">我要发布</div>
+                </div>
+                <div class="wn-mainpage-post-container">
+                    <div class="wn-mainpage-post-item">
+                        <div class="user-info">
+                            <div class="user-img">
+                                <img src="../static/img/test.bmp" alt="用户头像">
+                            </div>
+                            <div class="user-name">用户名</div>
+                        </div>
+                        <div class="post-info-1">
+                            <div class="post-type">置顶</div>
+                            <div class="post-status">精华</div>
+                        </div>
+                        <div class="post-info-2">
+                            <div class="post-title">帖子标题</div>
+                            <div class="post-deliver-time">发帖时间</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,122 @@
+
+body{
+    margin: 5px;
+}
+header{
+
+
+
+}
+.wn-nav-bar{
+    background-color: blue;
+    display: flex;
+
+    align-items: center;
+}
+
+.logo-container{
+    margin: 20px 0px 20px 10px;
+}
+.logo img{
+    width: 100px;
+    height: 60px;
+}
+
+.wn-nav-bar-menu-container{
+    background-color: red;
+    width: 50%;
+    min-width: 200px;
+}
+
+ul{
+    display: flex;
+    justify-content: left;
+}
+li{
+    display: block;
+    margin-left: 10%;
+}
+.search-container{
+
+    background-color: pink;
+    height: 60px;
+    width: 50%;
+    min-width: 300px;
+}
+.search-container input{
+    margin-top: 20px;
+    margin-left: 20%;
+}
+.search-container button{
+
+}
+
+.user-img-container{
+    margin: 20px 10px 20px 0px;
+}
+.user-img img{
+    width: 100px;
+    height: 60px;
+}
+
+
+
+
+
+.wn-mainpage-container{
+    background-color: black;
+}
+.wn-mainpage{
+    margin: 10px;
+    background-color: blue;
+}
+
+.wn-mainpage-tags{
+    background-color: yellow;
+    display: flex;
+    margin: 10px;
+}
+.wn-mainpage-tags div{
+
+}
+
+.hot-tag{
+    width: 80%;
+
+}
+.new-tag{
+    width: 10%;
+}
+.publish-tag{
+
+}
+
+.wn-mainpage-post-container{
+    margin: 10px;
+}
+
+.wn-mainpage-post-item{
+    display: flex;
+    background-color: green;
+
+}
+.user-info{
+    margin: auto;
+
+}
+.post-info-1{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: pink;
+    padding: 5px
+    width: 10%;
+}
+.post-info-2{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    width: 90%;
+
+}
