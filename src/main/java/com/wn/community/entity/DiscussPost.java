@@ -9,7 +9,7 @@ public class DiscussPost {
 
     private int id;
 
-    private String userId;
+    private int userId;
 
     private String title;
 

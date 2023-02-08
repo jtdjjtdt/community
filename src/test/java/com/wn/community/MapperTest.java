@@ -2,6 +2,7 @@ package com.wn.community;
 
 import com.wn.community.dao.DiscussPostMapper;
 import com.wn.community.dao.UserMapper;
+import com.wn.community.entity.DiscussPost;
 import com.wn.community.entity.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,11 @@ public class MapperTest {
 //        //测试lombok是否成功使用
 //        System.out.println(user.getId());
 
-        List<Object> list = discussPostMapper.selectDiscussPostAll();
+//        List<Object> list = discussPostMapper.selectAll();
+//        System.out.println(list);
+
+        List<DiscussPost> list = discussPostMapper.selectByUserId(101);
         System.out.println(list);
+        System.out.println(list.size());
     }
 }

@@ -8,8 +8,16 @@
         id, user_id, title, content, type, status, create_time, comment_count, score
     </sql>
 
-    <select id="selectDiscussPostAll" resultType="DiscussPost">
+    <select id="selectAll" resultType="DiscussPost">
         select <include refid="selectFields"></include>
         from discuss_post
+        where status != 2
+    </select>
+
+
+    <select id="selectByUserId" resultType="DiscussPost">
+        select <include refid="selectFields"></include>
+        from discuss_post
+        where user_id = #{userId}
     </select>
 </mapper>
