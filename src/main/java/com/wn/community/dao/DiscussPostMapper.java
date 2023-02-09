@@ -8,12 +8,11 @@ import java.util.List;
 @Mapper
 public interface DiscussPostMapper {
 
-    //返回用户名，帖子构成的列表
-    List<DiscussPost> selectAll();
+    List<DiscussPost> selectByUserId(int userId, int offset, int limit);
 
+    //返回某个用户发布的帖子总数（不包括拉黑的）
+    int selectPostRows(int userId);
 
-
-    List<DiscussPost> selectByUserId(int userId);
 
 
 }

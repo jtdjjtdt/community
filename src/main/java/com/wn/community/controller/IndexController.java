@@ -1,6 +1,7 @@
 package com.wn.community.controller;
 
 import com.wn.community.entity.DiscussPost;
+import com.wn.community.entity.Page;
 import com.wn.community.entity.User;
 import com.wn.community.service.DiscussPostService;
 import com.wn.community.service.UserService;
@@ -24,17 +25,23 @@ public class IndexController {
     private UserService userService;
 
     @GetMapping(path = "/index")
-    public String getIndexPage(Model model){
-        List<DiscussPost> discussPostList = discussPostService.selectDiscussPostByUserId(111);
-        List<Map<String, Object>> discussposts = new ArrayList<>();
+    public String getIndexPage(Model model, Page page){
+        page.setRows(discussPostService.selectPostRows(0));
+        page.setPath("index");
+
+        List<DiscussPost> discussPostList = discussPostService.selectByUserId(0, page.getOffset(), page.getLimit());
+        List<Map<String, Object>> discussPosts = new ArrayList<>();
         for(DiscussPost discussPost : discussPostList){
             Map<String, Object> map = new HashMap<>();
             map.put("discussPost", discussPost);
             User user = userService.selectById(discussPost.getUserId());
             map.put("user", user);
-            discussposts.add(map);
+            discussPosts.add(map);
         }
-        model.addAttribute("discussPosts", discussposts);
+        model.addAttribute("discussPosts", discussPosts);
         return "index";
     }
+
+
+
 }

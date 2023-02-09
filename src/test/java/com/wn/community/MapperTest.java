@@ -11,6 +11,11 @@ import org.springframework.test.context.ContextConfiguration;
 
 import java.util.List;
 
+/**
+ * @description:
+ * @author jt
+ * @date 2023/2/8 16:20
+ */
 @SpringBootTest
 @ContextConfiguration(classes = CommunityApplication.class)
 public class MapperTest {
@@ -19,6 +24,7 @@ public class MapperTest {
 
     @Autowired
     private DiscussPostMapper discussPostMapper;
+
 
     @Test
     public void testMapper(){
@@ -31,8 +37,19 @@ public class MapperTest {
 //        List<Object> list = discussPostMapper.selectAll();
 //        System.out.println(list);
 
-        List<DiscussPost> list = discussPostMapper.selectByUserId(101);
+        List<DiscussPost> list = discussPostMapper.selectByUserId(0, 0, 10);
         System.out.println(list);
-        System.out.println(list.size());
+        System.out.println(list.get(1).getStatus());
+        System.out.println(discussPostMapper.selectPostRows(0));
+    }
+/**
+ * @description:  这是一个测试用模板注释方法的方法
+ * @param:
+ * @return: void
+ * @author jt
+ * @date: 2023/2/8 16:19
+ */
+    public void test1(){
+
     }
 }

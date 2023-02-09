@@ -13,13 +13,12 @@ public class DiscussPostService {
     @Autowired
     private DiscussPostMapper discussPostMapper;
 
-    public List<DiscussPost> selectAll(){
-        return discussPostMapper.selectAll();
+    public List<DiscussPost> selectByUserId(int userId, int offset, int limit){
+        return discussPostMapper.selectByUserId(userId, offset, limit);
     }
 
-    public List<DiscussPost> selectDiscussPostByUserId(int userId){
-
-        return discussPostMapper.selectByUserId(userId);
+    public int selectPostRows(int userId){
+        return discussPostMapper.selectPostRows(userId);
     }
 
 }

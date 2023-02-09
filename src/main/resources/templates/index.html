@@ -67,10 +67,33 @@
                             <div class="post-deliver-time" th:text="${#dates.format(map.discussPost.createTime,'yyyy-MM-dd HH:mm:ss')}">发帖时间</div>
                         </div>
                     </div>
-
+                    <div class="divide-page">
+                        <ul class="divide-page-bar">
+                            <li class="divide-page-bar-item">
+                                <a class="page-link" th:href="@{${page.path}(current=1)}">首页</a>
+                            </li>
+                            <li class="divide-page-bar-item">
+                                <a class="page-link" th:href="@{${page.path}(current=${page.current-1})}">上一页</a>
+                            </li>
+                            <li class="divide-page-bar-item">
+                                <a class="page-link" th:href="@{${page.path}(current)}" th:text="${page.current}">1</a>
+                            </li>
+                            <li class="divide-page-bar-item">
+                                <a class="page-link" th:href="@{${page.path}(current=${page.current+1})}">下一页</a>
+                            </li>
+                            <li class="divide-page-bar-item">
+                                <a class="page-link" th:href="@{${page.path}(current=${page.total})}">末页</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
+    <footer>
+        <div class="footer-container">
+            这是页脚
+        </div>
+    </footer>
 </body>
 </html>
